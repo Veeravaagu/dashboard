@@ -1,14 +1,100 @@
+:root{
+    box-sizing: border-box;
+}
+
 .container{
     background-color: cadetblue;
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid: 10vw 1fr / 25vh 1fr;
+    grid: 18% 1fr / 18% 1fr;
 }
 
 .sidebar{
     background-color: aliceblue;
     grid-area: 1 / 1 / 3 / 2;
+    display: grid;
+    grid: 10% 1fr 2fr / 1fr;
+}
+
+.dashboard-container{
+    height: 10vh;
+    background-color: pink;
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.dashboard-container>img{
+    width: clamp(20%, 2rem, 30%);
+    height: clamp(30%, 3rem, 40%);
+}
+.dashboard-container>h2{
+    font-size: clamp(0.5rem, 2rem, 4rem);
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-container{
+    height: 60vh;
+grid-area: 2 / 1 / 3 / 2;
+background-color: antiquewhite;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
+
+.nav-items{
+    height: 10vh;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.nav-items>img{
+width: clamp(20%, 35%, 40%);
+height: clamp(30%, 45%, 50%);
+}
+
+.nav-items>h3{
+    font-size:  1rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+.service-container{
+    height: 30vh;
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.service-items{
+    height: 10vh;
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.service-items>img{
+    width: clamp(20%, 35%, 40%);
+    height: clamp(30%, 45%, 50%);
+}
+
+..service-items>h3{
+    font-size:  1rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
 }
 
 .header{
